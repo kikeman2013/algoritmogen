@@ -306,17 +306,17 @@ let generaciones = (arrnuevo , arrviejo) => {
     for(let i = 0 ; i <numerodemutacion;i++){
       arr.push(Math.round(Math.random()*totalgenes-1));
     }
-    console.log(`Indices a modificar: ${arr}`)
+    //console.log(`Indices a modificar: ${arr}`)
     let numgen = 0, x = 0;
     //recoremos todos los genes para sacar el indice a modificar 
     //y asignamos un valor entre 0 y 30 aleatoriamente
     for(let i = 0 ; i <numcromosomas;i++){
       for(let j = 0 ; j <numgenes;j++){
         if(numgen == arr[x]){
-          console.log('--------Mutando-----')
-          console.log(generacion[i].crossgen)
+          console.log('--------Mutancion-----')
+          //console.log(generacion[i].crossgen)
           let random = Math.round(Math.random()*30);
-          console.log(`se sustituira con : ${random}`);
+         // console.log(`se sustituira con : ${random}`);
           switch(j){
             case 0: 
               generacion[i].crossgen['a'] =random ;
@@ -335,7 +335,7 @@ let generaciones = (arrnuevo , arrviejo) => {
               console.log(`Mutacion en el cromosoma ${i+1} en el gen d`);
             break;
           }
-          console.log(generacion[i].crossgen)
+          //console.log(generacion[i].crossgen)
           i=0;
           j=0; 
           x+=1;
